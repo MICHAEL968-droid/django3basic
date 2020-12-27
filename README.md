@@ -1,3 +1,28 @@
+# django3basic
+
+
+python manage.py  startapp firstapp
+
+creted urls .py in firstapp 
+   >>> from django.urls import path 
+
+from . import views 
+
+urlpatterns = [
+     path('',views.home,name='home')
+]
+
+
+
+first app >> views.py
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+def home(request):
+	return HttpResponse ("Hello World")
+
+rajeev >>> urls.py 
+
 """rajeev URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
